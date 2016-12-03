@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showNextQuestion(sender: AnyObject) {
+        triviaModel?.next()
+
         // TODO: When we reach the end of the current loaded set we have to call another async GET request
         // TODO: which in turn causes a "???" question to show while it's loading.
         // TODO: Like above, How to update the label AFTER the request compeltes?
@@ -40,10 +42,6 @@ class ViewController: UIViewController {
         // TODO: Also, show a loading indicator?
         questionLabel.text = triviaModel?.questions[(triviaModel?.currentQuestionIndex)!].question
         answerLabel.text = "???"
-
-        // NOTE: Calling next AFTER the current question is displayed seems to help the above problem a little
-        // NOTE: (because the new data can load "in the background" while you read/answer the current one
-        triviaModel?.next()
     }
     
     @IBAction func showAnswer(sender: AnyObject) {
