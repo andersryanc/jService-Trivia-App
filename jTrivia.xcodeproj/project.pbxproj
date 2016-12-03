@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		94FA253A1DF3297500E38901 /* Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94FA253A1DF3297500E38901 /* jTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94FA253D1DF3297500E38901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94FA253F1DF3297500E38901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94FA25421DF3297500E38901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		94FA25311DF3297500E38901 = {
 			isa = PBXGroup;
 			children = (
-				94FA253C1DF3297500E38901 /* Quiz */,
+				94FA253C1DF3297500E38901 /* jTrivia */,
 				94FA253B1DF3297500E38901 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		94FA253B1DF3297500E38901 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94FA253A1DF3297500E38901 /* Quiz.app */,
+				94FA253A1DF3297500E38901 /* jTrivia.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94FA253C1DF3297500E38901 /* Quiz */ = {
+		94FA253C1DF3297500E38901 /* jTrivia */ = {
 			isa = PBXGroup;
 			children = (
 				94FA254F1DF32C5800E38901 /* Model */,
@@ -67,7 +67,7 @@
 				94FA25441DF3297500E38901 /* Assets.xcassets */,
 				94FA25491DF3297500E38901 /* Info.plist */,
 			);
-			path = Quiz;
+			path = jTrivia;
 			sourceTree = "<group>";
 		};
 		94FA254F1DF32C5800E38901 /* Model */ = {
@@ -100,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		94FA25391DF3297500E38901 /* Quiz */ = {
+		94FA25391DF3297500E38901 /* jTrivia */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94FA254C1DF3297500E38901 /* Build configuration list for PBXNativeTarget "Quiz" */;
+			buildConfigurationList = 94FA254C1DF3297500E38901 /* Build configuration list for PBXNativeTarget "jTrivia" */;
 			buildPhases = (
 				94FA25361DF3297500E38901 /* Sources */,
 				94FA25371DF3297500E38901 /* Frameworks */,
@@ -112,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = Quiz;
-			productName = Quiz;
-			productReference = 94FA253A1DF3297500E38901 /* Quiz.app */;
+			name = jTrivia;
+			productName = jTrivia;
+			productReference = 94FA253A1DF3297500E38901 /* jTrivia.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 94FA25351DF3297500E38901 /* Build configuration list for PBXProject "Quiz" */;
+			buildConfigurationList = 94FA25351DF3297500E38901 /* Build configuration list for PBXProject "jTrivia" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -147,7 +147,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94FA25391DF3297500E38901 /* Quiz */,
+				94FA25391DF3297500E38901 /* jTrivia */,
 			);
 		};
 /* End PBXProject section */
@@ -296,9 +296,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BEPPW5449K;
-				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jTrivia/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.MrAnderson.Quiz;
+				PRODUCT_BUNDLE_IDENTIFIER = io.MrAnderson.jTrivia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -309,9 +310,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BEPPW5449K;
-				INFOPLIST_FILE = Quiz/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/jTrivia/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.MrAnderson.Quiz;
+				PRODUCT_BUNDLE_IDENTIFIER = io.MrAnderson.jTrivia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -320,7 +322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94FA25351DF3297500E38901 /* Build configuration list for PBXProject "Quiz" */ = {
+		94FA25351DF3297500E38901 /* Build configuration list for PBXProject "jTrivia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94FA254A1DF3297500E38901 /* Debug */,
@@ -329,13 +331,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94FA254C1DF3297500E38901 /* Build configuration list for PBXNativeTarget "Quiz" */ = {
+		94FA254C1DF3297500E38901 /* Build configuration list for PBXNativeTarget "jTrivia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94FA254D1DF3297500E38901 /* Debug */,
 				94FA254E1DF3297500E38901 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

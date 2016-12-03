@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Quiz
+//  jTrivia
 //
 //  Created by Ryan Anderson on 12/3/16.
 //  Copyright © 2016 mranderson. All rights reserved.
