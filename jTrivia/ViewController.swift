@@ -10,13 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var currentQuestionLabel: UILabel!
+    @IBOutlet weak var nextQuestionLabel: UILabel!
+
     @IBOutlet weak var answerLabel: UILabel!
     
     @IBOutlet weak var questionButton: UIButton!
     @IBOutlet weak var answerButton: UIButton!
-    
-    var triviaModel: JServiceTriviaModel? = nil
+  
+    var triviaModel: JServiceTriviaModel?
+
+    // TODO: Should set this up as a "background service"
+//    lazy var triviaModel: JServiceTriviaModel = JServiceTriviaModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +37,12 @@ class ViewController: UIViewController {
         // TODO: Need to handle no internet connection
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("will appear")
+        nextQuestionLabel.alpha = 0
+    }
+    
     @IBAction func showNextQuestion(sender: AnyObject) {
         triviaModel?.next()
 
@@ -40,12 +51,43 @@ class ViewController: UIViewController {
         // TODO: Like above, How to update the label AFTER the request compeltes?
         // TODO: (this is easier to test/see with a low triviaModel.count)
         // TODO: Also, show a loading indicator?
-        questionLabel.text = triviaModel?.questions[(triviaModel?.currentQuestionIndex)!].question
+        let question = triviaModel?.questions[(triviaModel?.currentQuestionIndex)!].question
+        nextQuestionLabel.text = question
         answerLabel.text = "???"
+        
+        animateQuestionTransitions()
     }
     
     @IBAction func showAnswer(sender: AnyObject) {
         answerLabel.text = triviaModel?.questions[(triviaModel?.currentQuestionIndex)!].answer
+
+        answerLabel.alpha = 0
+        animateAnswerTransitions()
+    }
+    
+//    func didReceive(data: Array<Any>) {
+//        print("did receive")
+//
+//        questionLabel.text = triviaModel?.questions[(triviaModel?.currentQuestionIndex)!].question
+//        answerLabel.text = "???"
+//        
+//        questionLabel.alpha = 0
+//        animateTransitions()
+//    }
+    
+    func animateQuestionTransitions() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.currentQuestionLabel.alpha = 0
+            self.nextQuestionLabel.alpha = 1
+        }, completion: { _ in
+            swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
+        })
+    }
+    
+    func animateAnswerTransitions() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.answerLabel.alpha = 1
+        })
     }
     
 }

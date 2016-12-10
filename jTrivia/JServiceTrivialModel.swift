@@ -13,7 +13,6 @@ struct TriviaQuestion {
     var answer: String = "???"
     
     init() {
-
     }
     
     init(withQuestion q: String, andAnswer a: String) {
@@ -21,6 +20,10 @@ struct TriviaQuestion {
         self.answer = a
     }
 }
+
+//protocol JServiceTriviaModelDelegate: class {
+//    func didReceive(data: Array<Any>)
+//}
 
 class JServiceTriviaModel {
     
@@ -32,6 +35,12 @@ class JServiceTriviaModel {
     init() {
         self.loadQuestions()
     }
+    
+//    var delegate: JServiceTriviaModelDelegate?
+//    init(delegate: JServiceTriviaModelDelegate?) {
+//        self.delegate = delegate
+//        self.loadQuestions()
+//    }
     
     func loadQuestions() {
         self.questions = [TriviaQuestion()]
@@ -64,7 +73,9 @@ class JServiceTriviaModel {
                 
             }
             
-            }.resume()
+//            self.delegate?.didReceive(data:[]);
+            
+        }.resume()
     }
     
     func next() {

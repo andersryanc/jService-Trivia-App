@@ -42,13 +42,19 @@
                                     <action selector="showNextQuestionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mdg-lF-pPd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06l-PK-4SD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06l-PK-4SD">
                                 <rect key="frame" x="37" y="417.5" width="300" height="166.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0L-jg-NyJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0L-jg-NyJ">
+                                <rect key="frame" x="37.5" y="84" width="300" height="166.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUb-4T-SZy">
                                 <rect key="frame" x="37.5" y="84" width="300" height="166.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,12 +64,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2al-Cg-JK7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="3Aj-at-rmw"/>
+                            <constraint firstItem="SUb-4T-SZy" firstAttribute="width" secondItem="H0L-jg-NyJ" secondAttribute="width" id="3fJ-AQ-cAT"/>
                             <constraint firstItem="EOM-Kf-iFB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="5LU-FM-aik"/>
                             <constraint firstItem="H0L-jg-NyJ" firstAttribute="centerX" secondItem="2al-Cg-JK7" secondAttribute="centerX" id="7gG-Gh-SXe"/>
                             <constraint firstItem="EOM-Kf-iFB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8nL-sF-tgz"/>
+                            <constraint firstItem="SUb-4T-SZy" firstAttribute="top" secondItem="H0L-jg-NyJ" secondAttribute="top" id="CzJ-Is-TsK"/>
                             <constraint firstItem="2al-Cg-JK7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="I3H-Vi-NpQ"/>
+                            <constraint firstItem="SUb-4T-SZy" firstAttribute="height" secondItem="H0L-jg-NyJ" secondAttribute="height" id="N4F-4C-mlB"/>
                             <constraint firstItem="H0L-jg-NyJ" firstAttribute="height" secondItem="2al-Cg-JK7" secondAttribute="height" multiplier="0.5" id="OaV-ec-pei"/>
                             <constraint firstItem="06l-PK-4SD" firstAttribute="centerY" secondItem="EOM-Kf-iFB" secondAttribute="centerY" id="TIl-Qq-hYa"/>
+                            <constraint firstItem="SUb-4T-SZy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YHm-of-gFm"/>
                             <constraint firstItem="06l-PK-4SD" firstAttribute="width" secondItem="EOM-Kf-iFB" secondAttribute="width" multiplier="0.8" id="ZXn-pN-AUc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EOM-Kf-iFB" secondAttribute="bottom" id="cix-Pa-Y2d"/>
                             <constraint firstItem="06l-PK-4SD" firstAttribute="centerX" secondItem="EOM-Kf-iFB" secondAttribute="centerX" id="crK-lX-ewf"/>
@@ -78,8 +88,9 @@
                     <connections>
                         <outlet property="answerButton" destination="EOM-Kf-iFB" id="DF3-dR-vDu"/>
                         <outlet property="answerLabel" destination="06l-PK-4SD" id="ELf-do-zCn"/>
+                        <outlet property="currentQuestionLabel" destination="H0L-jg-NyJ" id="kao-Ba-Wps"/>
+                        <outlet property="nextQuestionLabel" destination="SUb-4T-SZy" id="Zzp-GZ-iQA"/>
                         <outlet property="questionButton" destination="2al-Cg-JK7" id="cEW-bh-RTV"/>
-                        <outlet property="questionLabel" destination="H0L-jg-NyJ" id="O9n-rG-EFI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
